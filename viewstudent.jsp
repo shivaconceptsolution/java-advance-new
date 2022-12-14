@@ -18,7 +18,7 @@ ResultSet res = st.executeQuery("select * from student");
 while(res.next())
 {%>
 
-<tr><td><%= res.getString(1) %></td><td><%= res.getString(2) %></td><td><%= res.getString(3) %></td><td><%= res.getString(4) %></td></tr>
+<tr><td><%= res.getString(1) %></td><td><%= res.getString(2) %></td><td><%= res.getString(3) %></td><td><%= res.getString(4) %></td><td><a href="Editstudent.jsp?q=<%= res.getString(1)  %>">Edit</a></td><td><a href="Deletesudent.jsp?q=<%= res.getString(1)  %>">Delete</a></td> </tr>
 	
 <%}
 res.close();
